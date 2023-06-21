@@ -6,6 +6,33 @@
     <title>Listado de Peliculas</title>
 </head>
 <body>
+ 
     <h1>Listado de Peliculas</h1>
+
+    <div><a href="/create">Crear Pelicula</a>
+    </div>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Duracion</th>
+            <th>Fecha Alta</th>
+            <th>Fecha Modificacion</th>
+            <th colspan="2">Acciones</th>
+
+            <tr>
+{% for movie in data_jinja_movies %}
+<tr>
+    <td>{{ movie[0]}}</td>
+    <td>{{movie[1]}}</td>
+    <td>{{movie[2]}}</td>
+    <td>{{movie[3]}}</td>
+    <td>{{movie[4]}}</td>
+</tr>
+{% endfor %}
+</table>
+
+
+</tr>
 </body>
 </html>
